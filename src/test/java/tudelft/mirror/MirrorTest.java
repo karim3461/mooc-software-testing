@@ -24,15 +24,15 @@ public class MirrorTest {
     }
 
     @Test
-    public void mirrorOK() {
+    public void mirrorNotOK() {
         String result = new Mirror().mirrorEnds("abccba");
-        Assertions.assertEquals("abc", result);
+        Assertions.assertEquals("abccba", result);
     }
 
     @Test
-    public void mirrorNotOK() {
+    public void mirrorOK() {
         String result = new Mirror().mirrorEnds("abcba");
-        Assertions.assertEquals("ab",result);
+        Assertions.assertEquals("abcba",result);
     }
 
     @Test
