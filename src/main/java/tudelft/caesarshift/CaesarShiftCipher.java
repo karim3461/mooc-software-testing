@@ -6,13 +6,14 @@ public class CaesarShiftCipher {
         StringBuilder sb = new StringBuilder();
         char currentChar;
         int length = message.length();
+        if (length == 0) return "invalid";  // Added 2018-11-26
 
         shift = shift%26;
 
         for(int i = 0; i < length; i++){
             currentChar = message.charAt(i);
            
-            sb.append(currentChar);
+            //sb.append(currentChar);
             if (currentChar > 'z' || currentChar < 'a') {
                 return "invalid";
             } else if ((char) (currentChar + shift) > 'z') {
