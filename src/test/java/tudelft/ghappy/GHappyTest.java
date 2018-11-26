@@ -52,4 +52,10 @@ public class GHappyTest {
         boolean result = new GHappy().gHappy("gg");
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void happyEmptyInput() {
+        boolean result = new GHappy().gHappy("");
+        Assertions.assertFalse(result);
+    }
 }
