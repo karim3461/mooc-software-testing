@@ -14,15 +14,21 @@ public class RomanNumeralTestWithBeforeEach {
     }
 
     @Test
-    public void singleNumber() {
+    public void singleDigit() {
         int result = roman.convert("I");
         Assertions.assertEquals(1, result);
     }
 
     @Test
-    public void numberWithManyDigits() {
+    public void multipleDigits() {
         int result = roman.convert("VIII");
         Assertions.assertEquals(8, result);
+    }
+
+    @Test
+    public void numberWithDifferentDigits() {
+        int result = roman.convert("MCV");
+        Assertions.assertEquals(1105, result);
     }
 
     @Test
