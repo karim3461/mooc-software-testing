@@ -8,8 +8,8 @@ public class RomanNumeralTest {
     @Test
     public void singleDigit() {
         RomanNumeral roman = new RomanNumeral();
-        int result = roman.convert("D");
-        Assertions.assertEquals(500, result);
+        int result = roman.convert("I");
+        Assertions.assertEquals(1, result);
     }
 
     @Test
@@ -22,8 +22,8 @@ public class RomanNumeralTest {
     @Test
     public void numberWithDifferentDigits() {
         RomanNumeral roman = new RomanNumeral();
-        int result = roman.convert("MCV");
-        Assertions.assertEquals(1105, result);
+        int result = roman.convert("MCVI");
+        Assertions.assertEquals(1106, result);
     }
 
     @Test
@@ -40,10 +40,10 @@ public class RomanNumeralTest {
         Assertions.assertEquals(142, result);
     }
 
-    /*@Test
+    @Test
     public void invalidNumber() {
         RomanNumeral roman = new RomanNumeral();
         int result = roman.convert("IIII");
-        Assertions.assertEquals("Invalid", result);
-    }*/
+        Assertions.assertEquals(-1, result);
+    }
 }

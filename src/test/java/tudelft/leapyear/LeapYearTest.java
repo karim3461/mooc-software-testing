@@ -26,6 +26,6 @@ public class LeapYearTest {
     @Test
     public void nonLeapYears() {
         LeapYear ly = new LeapYear();
-        Assertions.assertFalse(ly.isLeapYear(2017));
+        Assertions.assertFalse(ly.isLeapYear(1967));
     }
 }
